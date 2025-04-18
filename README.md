@@ -1,0 +1,94 @@
+# 🎭 Playwright + Postman Integration Framework
+
+A robust and scalable testing framework combining **Playwright** for UI automation and **Postman/Newman** for API validation — all in a unified TypeScript project.
+
+---
+
+## 🚀 Features
+
+- ✅ TypeScript-based Playwright tests
+- ✅ Postman API tests triggered dynamically via Newman
+- ✅ `.env` support for secure token management
+- ✅ Automatic syncing of updated auth tokens
+- ✅ Clean folder structure for scalability
+- ✅ Git and `.gitignore` ready
+
+---
+
+## 📁 Project Structure
+
+\`\`\`
+Playwright-Postman-framework/
+├── tests/                 # UI and API test specs
+│   ├── ui/
+│   └── api/
+├── postman/               # Postman collection and environment
+├── dist/                  # Compiled JS output
+├── .env                   # Runtime secrets (ignored in Git)
+├── .gitignore
+├── playwright.config.ts
+├── newman-runner.ts       # Triggers Postman collections via Newman
+├── tsconfig.json
+└── README.md
+\`\`\`
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Install Dependencies
+
+\`\`\`bash
+npm install
+npx playwright install
+\`\`\`
+
+### 2. Run All Tests
+
+\`\`\`bash
+npx playwright test
+\`\`\`
+
+This will:
+- Trigger Postman tests via Newman
+- Run Playwright UI tests afterward
+- Sync the latest \`authToken\` back into \`.env\`
+
+---
+
+## 🔐 Environment Management
+
+- Auth tokens are dynamically generated during test runs.
+- Tokens are saved to \`.env\` for reuse across test flows.
+- \`.env\` is safely excluded from Git via \`.gitignore\`.
+
+---
+
+## 📦 Requirements
+
+- Node.js v18+
+- Playwright
+- Newman CLI
+- Git (for version control)
+
+---
+
+## 🧪 Sample API Flow
+
+1. Logs in via Postman collection
+2. Extracts and stores token
+3. Uses token in subsequent requests
+4. Passes token to Playwright if needed
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repo and build on it for your own testing needs. PRs and improvements are welcome!
+
+---
+
+## 📜 License
+
+MIT — free for personal and commercial use.
+"@ > README.md
