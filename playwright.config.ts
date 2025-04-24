@@ -10,4 +10,6 @@ export default defineConfig({
     actionTimeout: 5000,
     ignoreHTTPSErrors: true,
   },
+  reporter: [['html', { outputFolder: 'reports/ui', open: 'never' }]],
+
 });

@@ -41,7 +41,7 @@ export const runPostmanCollection = async (): Promise<void> => {
 
   await new Promise((resolve) => {
     exec(
-      `npx newman run "${collectionPath}" -e "${environmentPath}" --env-var authToken="${fallbackToken}" --export-environment "${environmentPath}"`,
+      `npx newman run "${collectionPath}" -e "${environmentPath}" --env-var authToken="${fallbackToken}" --export-environment "${environmentPath}" --reporters cli,html --reporter-html-export "reports/api/newman-report.html"`,
       (error, stdout, stderr) => {
         console.log(`Newman run output:\n${stdout}`);
         if (error) {
