@@ -23,7 +23,9 @@ jobs:
         run: npm install
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+        run: |
+          chmod +x ./node_modules/.bin/playwright
+          npx playwright install --with-deps
 
       - name: Compile TypeScript
         run: npx tsc
