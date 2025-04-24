@@ -35,13 +35,13 @@ jobs:
         run: npx playwright test
 
       - name: Upload API Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: postman-report
           path: reports/api/newman-report.html
 
       - name: Upload UI Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: playwright-report
           path: reports/ui/
