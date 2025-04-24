@@ -1,8 +1,8 @@
 {
   "_": {
     "postman_variable_scope": "environment",
-    "postman_exported_at": "2025-04-17T00:00:00Z",
-    "postman_exported_using": "Custom"
+    "postman_exported_at": "2025-04-24T02:10:58.331Z",
+    "postman_exported_using": "Newman/6.2.1"
   },
   "id": "playwright-env-id",
   "name": "Playwright Dynamic Environment",
@@ -14,6 +14,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2025-04-18T01:42:56.334Z",
+  "_postman_exported_at": "2025-04-24T02:11:33.027Z",
   "_postman_exported_using": "Newman/6.2.1"
 }

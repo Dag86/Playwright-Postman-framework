@@ -11,4 +11,5 @@ exports.default = (0, test_1.defineConfig)({
         actionTimeout: 5000,
         ignoreHTTPSErrors: true,
     },
+    reporter: [['html', { outputFolder: 'reports/ui', open: 'never' }]],
 });
