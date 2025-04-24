@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  pull-requests: write
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -47,3 +51,16 @@ jobs:
         with:
           name: playwright-report
           path: reports/ui/
+
+      - name: Comment on PR with test results
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ✅ CI run completed successfully.
+            📦 Reports uploaded:
+            - 🧪 Postman → `postman-report`
+            - 🎭 Playwright → `playwright-report`
+
+            You can download them from the "Artifacts" section of this run.

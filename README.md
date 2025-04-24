@@ -2,6 +2,8 @@
 
 A robust and scalable testing framework combining **Playwright** for UI automation and **Postman/Newman** for API validation — all in a unified TypeScript project.
 
+![CI](https://github.com/Dag86/Playwright-Postman-framework/actions/workflows/test.yml/badge.svg)
+
 ---
 
 ## 🚀 Features
