@@ -6,9 +6,18 @@
   "directories": {
     "test": "tests"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+   "scripts": {
+     "test": "npx playwright test",
+      "test:ui": "npx playwright test tests/ui",
+      "test:api": "node dist/newman-runner.js",
+      "build": "tsc",
+      "dev": "ts-node newman-runner.ts",
+      "report:open:ui": "npx playwright show-report reports/ui",
+      "report:open:api": "start reports/api/newman-report.html"
+    
+   },
+
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
